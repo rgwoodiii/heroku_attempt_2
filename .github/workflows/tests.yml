@@ -25,9 +25,11 @@ jobs:
           aws-region: us-east-1
       - name: Setup DVC
         uses: iterative/setup-dvc@v1
-      - name: Pull data from DVC
-        run: dvc pull data -R
+      - name: DVC pull
+        run: |
+          dvc pull 
       - name: Run Flake8
         run: flake8 --max-line-length=100 
       - name: Run pytest
-        run: pipenv run pytest
+        run: |
+          pytest -vv
