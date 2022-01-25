@@ -26,4 +26,5 @@ jobs:
       - name: Run Flake8
         run: flake8 --max-line-length=100 
       - name: Run pytest
-        run: pytest --assert 2 ==2
+        run: |
+        pytest
